@@ -1,6 +1,11 @@
 import json
+import os
 import funciones
-animales = r"c:\Users\angel\Desktop\Visual\ProyectoJson\animales.json"
+
+# Construir la ruta absoluta del archivo JSON
+current_dir = os.path.dirname(__file__)  # Obtiene el directorio actual del archivo main.py
+animales = os.path.join(current_dir, "animales.json")  # Construye la ruta completa
+
 
 try:
     with open(animales, 'r', encoding='utf-8') as file:
